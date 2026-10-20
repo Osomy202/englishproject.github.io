@@ -1,1 +1,134 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Interactive UI</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="app">
+
+        <!-- Header -->
+        <header class="topbar">
+            <h1 class="logo">My Interface</h1>
+            <span class="status">Interactive Demo</span>
+        </header>
+
+        <!-- Main content -->
+        <main class="content" id="pageContainer">
+
+            <!-- Page 1 -->
+            <section class="page active" data-page="0">
+                <p class="eyebrow">WELCOME</p>
+                <h2>Home Page</h2>
+                <p>
+                    Welcome to your interactive website.
+                    Use the navigation below to explore
+                    different pages.
+                </p>
+
+                <div class="demo-card">
+                    <h3>Getting Started</h3>
+                    <p>
+                        Add your own text, images, buttons,
+                        forms, or other interactive elements here.
+                    </p>
+                    <button class="primary-button"
+                            data-go-to="1">
+                        Explore More
+                    </button>
+                </div>
+            </section>
+
+            <!-- Page 2 -->
+            <section class="page" data-page="1" hidden>
+                <p class="eyebrow">DISCOVER</p>
+                <h2>Explore</h2>
+                <p>
+                    This is your second page. Each page can
+                    have completely different content.
+                </p>
+
+                <div class="demo-card">
+                    <h3>Interactive Content</h3>
+                    <p>
+                        You can place settings, galleries,
+                        information panels, or other features here.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Page 3 -->
+            <section class="page" data-page="2" hidden>
+                <p class="eyebrow">YOUR SPACE</p>
+                <h2>Settings</h2>
+                <p>
+                    This is your third page. Use it for
+                    settings, user preferences, or a profile.
+                </p>
+
+                <div class="demo-card">
+                    <h3>Example Setting</h3>
+                    <label class="toggle-row">
+                        <span>Enable notifications</span>
+                        <input type="checkbox" id="notifications">
+                    </label>
+                    <p id="settingStatus" aria-live="polite">
+                        Notifications are off.
+                    </p>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Bottom navigation -->
+        <nav class="bottom-nav" aria-label="Page navigation">
+
+            <button class="nav-button" id="prevBtn" type="button">
+                <span aria-hidden="true">&larr;</span>
+                Previous
+            </button>
+
+            <div class="page-indicators"
+                 id="pageIndicators"
+                 aria-label="Choose a page">
+                <button class="page-dot active"
+                        type="button"
+                        data-go-to="0"
+                        aria-label="Go to Home Page"
+                        aria-current="page"></button>
+
+                <button class="page-dot"
+                        type="button"
+                        data-go-to="1"
+                        aria-label="Go to Explore Page"></button>
+
+                <button class="page-dot"
+                        type="button"
+                        data-go-to="2"
+                        aria-label="Go to Settings Page"></button>
+            </div>
+
+            <button class="nav-button next-button"
+                    id="nextBtn"
+                    type="button">
+                Next
+                <span aria-hidden="true">&rarr;</span>
+            </button>
+
+        </nav>
+
+        <footer class="footer">
+            <span id="pageCount">Page 1 of 3</span>
+        </footer>
+
+    </div>
+</body>
+</html>
+
