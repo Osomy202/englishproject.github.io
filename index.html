@@ -48,10 +48,6 @@
         <p class="red">ACCESS DENIED.</p>
         <p>The contents of this file remain unavailable.</p>
 
-        <div class="countdown-label">TIME UNTIL RELEASE</div>
-        <div id="countdown" class="countdown">CALCULATING...</div>
-        <p id="release-message" class="dim">
-          Return when the time comes.
         </p>
       </div>
 
@@ -86,37 +82,6 @@
     <p>AN ENGLISH CLASS PROJECT</p>
   </footer>
 
-  <script>
-    // CHANGE THIS DATE TO YOUR STORY'S RELEASE DATE.
-    // Format: YYYY-MM-DDTHH:MM:SS
-    // This example releases on January 1, 2027.
-    const releaseDate = new Date("2027-01-01T00:00:00");
-
-    const countdown = document.getElementById("countdown");
-    const locked = document.getElementById("locked");
-    const story = document.getElementById("story");
-    const message = document.getElementById("release-message");
-
-    function updateArchive() {
-      const remaining = releaseDate.getTime() - Date.now();
-
-      if (remaining <= 0) {
-        locked.hidden = true;
-        story.hidden = false;
-        return;
-      }
-
-      const days = Math.floor(remaining / 86400000);
-      const hours = Math.floor((remaining % 86400000) / 3600000);
-      const minutes = Math.floor((remaining % 3600000) / 60000);
-      const seconds = Math.floor((remaining % 60000) / 1000);
-
-      countdown.textContent =
-        `${days}D ${hours}H ${minutes}M ${seconds}S`;
-    }
-
-    updateArchive();
-    setInterval(updateArchive, 1000);
   </script>
 </body>
 </html>
