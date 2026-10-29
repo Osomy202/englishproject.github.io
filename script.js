@@ -86,3 +86,16 @@ notifications.addEventListener("change", () => {
 // Initialize the UI
 showPage(0);
 
+
+function toggleReadMore() {
+  const moreText = document.getElementById("more-text");
+  const btnText = document.getElementById("read-more-btn");
+
+  if (moreText.style.display === "none" || moreText.style.display === "") {
+    moreText.style.display = "inline";
+    btnText.innerHTML = "Read Less";
+  } else {
+    moreText.style.display = "none";
+    btnText.innerHTML = "Continue Reading";
+  }
+}
