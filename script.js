@@ -99,3 +99,10 @@ function toggleReadMore() {
     btnText.innerHTML = "Continue Reading";
   }
 }
+function unlockDocument() {
+    const locked = document.getElementById("locked");
+    const story = document.getElementById("story");
+
+    locked.hidden = true;
+    story.hidden = false;
+}
